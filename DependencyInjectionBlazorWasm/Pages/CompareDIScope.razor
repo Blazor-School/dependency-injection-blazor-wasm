@@ -1,0 +1,32 @@
+﻿@using DependencyInjectionBlazorWasm.Abstractions
+@page "/compare-di-scope"
+@inject IGuidProviderTransientService TransientService1
+@inject IGuidProviderTransientService TransientService2
+@inject IGuidProviderScopedService ScopedService1
+@inject IGuidProviderScopedService ScopedService2
+@inject IGuidProviderSingletonService SingleService1
+@inject IGuidProviderSingletonService SingleService2
+
+<h3>CompareDIScope</h3>
+<table class="table table-primary">
+    <tr>
+        <th><h1>Service Type</h1></th>
+        <th><h1>First Inject</h1></th>
+        <th><h1>Second Inject</h1></th>
+    </tr>
+    <tr>
+        <td>Transient</td>
+        <td>@TransientService1.Guid</td>
+        <td>@TransientService2.Guid</td>
+    </tr>
+    <tr>
+        <td>Scoped</td>
+        <td>@ScopedService1.Guid</td>
+        <td>@ScopedService2.Guid</td>
+    </tr>
+    <tr>
+        <td>Singleton</td>
+        <td>@ScopedService1.Guid</td>
+        <td>@ScopedService2.Guid</td>
+    </tr>
+</table>

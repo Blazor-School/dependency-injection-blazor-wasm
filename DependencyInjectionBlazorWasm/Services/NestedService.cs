@@ -4,14 +4,8 @@
     {
         private readonly SimpleService _simpleService;
 
-        public NestedService(SimpleService simpleService)
-        {
-            _simpleService = simpleService;
-        }
+        public NestedService(SimpleService simpleService) => _simpleService = simpleService;
 
-        public string ServePeople()
-        {
-            return $"{_simpleService.Greeting("customer")}, how can I help?";
-        }
+        public string ServePeople() => $"{_simpleService.Greeting("customer")}, how can I help?";
     }
 }

@@ -1,0 +1,7 @@
+﻿@page "/multiple-constructors-di"
+@using DependencyInjectionBlazorWasm.Abstractions
+@inject IFirstConstructor ConstructedWithFirstConstructor
+@inject ISecondConstructor ConstructedWithSecondConstructor
+
+<h3>@ConstructedWithFirstConstructor.ServiceDetail</h3>
+<h3>@ConstructedWithSecondConstructor.ServiceDetail</h3>
